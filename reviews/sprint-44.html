@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Team Ocean Hamburg - Review Sprint 44</title>
+
+		<meta name="author" content="Team Ocean Hamburg">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/ocean.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Sprint Review 44</h1>
+					<p>Team Ocean Hamburg</p>
+				</section>
+
+				<section>
+	        <section>
+	          <h2>Agenda</h2>
+	          <ul>
+	            <li>PayPal PLUS</li>
+	            <li>PayPal Express</li>
+	            <li>Postfinance</li>
+	            <li>Unity</li>
+	          </ul>
+	        </section>
+
+					<section>
+						<h2>Ticket distribution</h2>
+						<ul>
+							<li>1 New Feature</li>
+							<li>5 Improvement</li>
+							<li>4 Task</li>
+							<li>6 Bug</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Quality Metrics</h2>
+						<p>...</p>
+					</section>
+				</section>
+
+        <section data-background="#72d6ff" data-background-transition="zoom">
+          <section>
+            <h3>PayPal PLUS</h3>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6308">AD-6308 PayPal PLUS</a>: a security check will now prevent a broken-checkout in case the paypal java-script widget fails.</p>
+            <div class="demo-button"><a href="https://thirdpartyspoon.epages.com/epages/Review.admin/secbd691bdeac/?ViewAction=MBO-ViewPaymentList&ObjectID=21555">Demo</a></div>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6752">AD-6752 PayPal PLUS</a>: target environment now depents on 'internal-test-shop' flag.</p>
+            <div class="demo-button"><a href="https://thirdpartyspoon.epages.com/epages/PayPalPlus.admin/seca2cb57f99f/?ViewAction=MBO-ViewPaymentList&ObjectID=21183
+https://thirdpartyspoon.epages.com/PBO">Demo</a></div>
+          </section>
+
+          <section>
+            <h3>Mentions</h3>
+            <ul>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-6378">AD-6378 PayPal PLUS</a>: in case PATCH payment fails there will now be shown a error message to the merchant.</li>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-3927">AD-3927 PayPal PLUS</a>: a failing GET merchant-status call will now be logged to the communication-log instead of error-log.</li>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-6646">AD-6646 PayPal PLUS</a>: fixed a native die in classic/mobile checkout that occured in case the customer logged in during address step.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-background="#246df5" data-background-transition="zoom">
+          <section>
+            <h3>PayPal Express</h3>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6527">AD-6527 PayPal Express</a>: introduced PBO toggle to enable guestcheckout option.</p>
+            <div class="demo-button"><a href="https://thirdpartyspoon.epages.com/epages/Review.admin/secbd691bdeac/?ViewAction=MBO-ViewPaymentList&ObjectID=21555">Demo</a></div>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6863">AD-6863 PayPal Express</a>: introduced more ESF-test cases.</p>
+            <div class="demo-button"><a href="https://epages.atlassian.net/wiki/display/RND/ESF+Test+PayPal+Express+Payment+Flow">Demo</a></div>
+          </section>
+
+          <section>
+            <h3>Mentions</h3>
+            <ul>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-6322">AD-6322 PayPal Express</a>: fixed a issue where the redirect would result in a login-page in case the user session would timeout during the payment process.</li>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-6933">AD-6933 PayPal Express</a>: Renamed 'PayPalExpress' to 'PayPal'.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-background="#fff372" data-background-transition="zoom">
+          <section>
+            <h3>Postfinance</h3>
+          </section>
+
+          <section>
+            <h3>Mentions</h3>
+            <ul>
+              <li class="fragment"><a href="https://epages.atlassian.net/browse/AD-6813">AD-6813 Postfinance</a>: fixed a issue where the status of an order would not be updated in case the order was created with 'order after payment'-option.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section data-background="#f52424" data-background-transition="zoom">
+          <section>
+            <h3>Unity</h3>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6481">AD-6481</a>: <strong>getAlternativeCheckoutButtonInfo</strong> now provides information about one-click buttons for specific payments.</p>
+          </section>
+        </section>
+
+        <section  data-background="#000000" data-background-transition="zoom">
+          <h3>FIN.</h3>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
