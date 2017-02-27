@@ -1,7 +1,36 @@
-
 /* render ticket-distribution chart */
 function renderTicketDistribution(data) {
   var ctx = document.getElementById("ticket-distribution");
+
+  var chartData = {
+      labels: Object.keys(data),
+      datasets: [
+          {
+              data: Object.values(data),
+              backgroundColor: [
+                  "#f52424",
+                  "#008add",
+                  "#c0c0c0"
+              ],
+              hoverBackgroundColor: [
+                  "#cb4336",
+                  "#3d85b0",
+                  "#59a636"
+              ]
+          }]
+  };
+
+  var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: chartData
+  });
+}
+
+
+
+/* render ticket-distribution chart */
+function renderTicketTypeDistribution(data) {
+  var ctx = document.getElementById("ticket-type-distribution");
 
   var chartData = {
       labels: Object.keys(data),
@@ -24,11 +53,8 @@ function renderTicketDistribution(data) {
   };
 
   var myChart = new Chart(ctx, {
-      type: 'polarArea',
-      data: chartData,
-      options: {
-        scale: 15
-      }
+      type: 'doughnut',
+      data: chartData
   });
 }
 

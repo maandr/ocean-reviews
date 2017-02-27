@@ -34,28 +34,56 @@
 					<p class="white">Team Ocean Hamburg</p>
 				</section>
 
-				<section>
+				<section data-background="#000000" data-background-transition="zoom">
 
 					<section>
 	          <h2>Impediments</h2>
 	          <ul>
-	            <li>Onboarding of new Developers</li>
-	            <li>Sickness</li>
+	            <li>Vacations</li>
 	          </ul>
 	        </section>
 
 	        <section>
 	          <h2>Agenda</h2>
 	          <ul>
-
+							<li>Sprint Numbers</li>
+							<li>PayPal Express</li>
 	          </ul>
 	        </section>
 
+					<!--
 					<section>
-						<h2>Ticket distribution</h2>
+						<h2>Quality Metrics</h2>
+						<div class="demo-button"><a href="http://easy.vm-intern.epages.com:9000/about" target="_blank">SonarQube</a></div>
+					</section>
+					--->
+				</section>
+
+				<section data-background="#ffffff" data-background-transition="zoom">
+
+					<section>
+            <h2>Sprint Numbers</h2>
+          </section>
+
+					<section>
+						<h3>Ticket distribution</h3>
+
 						<canvas id="ticket-distribution" width="400" height="200"></canvas>
 						<script>
 							renderTicketDistribution({
+								"ePages Now": 3,
+								"ePages6": 2,
+								"Infrastructure": 1
+							});
+						</script>
+					</section>
+
+					<section>
+						<h3>Ticket distribution</h3>
+
+						<canvas id="ticket-type-distribution" width="400" height="200"></canvas>
+						<script>
+							renderTicketTypeDistribution({
 								"bug": 3,
 								"task": 2,
 								"improvement": 1,
@@ -65,7 +93,7 @@
 					</section>
 
 					<section>
-						<h2>Merged</h2>
+						<h3>Merged</h3>
 						<canvas id="ticket-status" width="400" height="200"></canvas>
 						<script>
 							renderTicketStatus({
@@ -75,13 +103,6 @@
 							});
 						</script>
 					</section>
-
-					<!--
-					<section>
-						<h2>Quality Metrics</h2>
-						<div class="demo-button"><a href="http://easy.vm-intern.epages.com:9000/about" target="_blank">SonarQube</a></div>
-					</section>
-					--->
 				</section>
 
         <section data-background="#72d6ff" data-background-transition="zoom">
