@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Team Ocean Hamburg - Review Sprint 46</title>
+
+		<meta name="author" content="Team Ocean Hamburg">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/ocean.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	  <script src="sprint-47.js"></script>
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+		<script src="../js/Chart.js"></script>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background="../assets/img/team-ocean.jpg">
+					<h1 class="white">Sprint Review 47</h1>
+					<p class="white">Team Ocean Hamburg</p>
+				</section>
+
+				<section>
+
+					<section>
+	          <h2>Impediments</h2>
+	          <ul>
+	            <li>Onboarding of new Developers</li>
+	            <li>Sickness</li>
+	          </ul>
+	        </section>
+
+	        <section>
+	          <h2>Agenda</h2>
+	          <ul>
+
+	          </ul>
+	        </section>
+
+					<section>
+						<h2>Ticket distribution</h2>
+						<canvas id="ticket-distribution" width="400" height="200"></canvas>
+						<script>
+							renderTicketDistribution({
+								"bug": 3,
+								"task": 2,
+								"improvement": 1,
+								"research": 3
+							});
+						</script>
+					</section>
+
+					<section>
+						<h2>Merged</h2>
+						<canvas id="ticket-status" width="400" height="200"></canvas>
+						<script>
+							renderTicketStatus({
+								"merged": 4,
+								"waiting for integration": 5,
+								"done": 3
+							});
+						</script>
+					</section>
+
+					<!--
+					<section>
+						<h2>Quality Metrics</h2>
+						<div class="demo-button"><a href="http://easy.vm-intern.epages.com:9000/about" target="_blank">SonarQube</a></div>
+					</section>
+					--->
+				</section>
+
+        <section data-background="#72d6ff" data-background-transition="zoom">
+          <section>
+            <h3>PayPal PLUS</h3>
+          </section>
+
+          <section>
+            <p><a href="https://epages.atlassian.net/browse/AD-6782" target="_blank">AD-6308 PayPal PLUS</a>:
+							epages address fields <strong>Address (2nd line)</strong>, <strong>Address extention</strong> and <strong>Company</strong> are now transfered to PayPal.</p>
+            <div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanReview.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
+          </section>
+
+          <section>
+            <h3>Mentions</h3>
+            <ul>
+              <li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-6812" target="_blank">AD-6812 PayPal PLUS</a>:
+								when setup as <strong><i>order after payment</i></strong> it's no longer possible to block the checkout when canceling during the payment at paypal and then reattempt to checkout.
+							</li>
+							<li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-6912" target="_blank">AD-6912 PayPal PLUS</a>:
+								refactored code for determining the target environment of the payment method.
+							</li>
+						</ul>
+          </section>
+        </section>
+
+				<section data-background="#fbbc05" data-background-transition="zoom">
+          <section>
+            <h3>Google Shopping</h3>
+          </section>
+
+					<section>
+						<p>
+							<a href="https://epages.atlassian.net/browse/AD-5499" target="_blank">AD-5499</a>:
+							provided option to choose how to export products with stocklevel 0.
+						</p>
+						<div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanReview.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
+					</section>
+
+        </section>
+
+				<section data-background="#34a853" data-background-transition="zoom">
+          <section>
+            <h3>Sage One</h3>
+          </section>
+
+					<section>
+						<h3>Mentions</h3>
+            <ul>
+              <li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-6936" target="_blank">AD-6936</a>:
+								DELETE order call was missing a header-field specifing the integration version. It caused unnecessary error logs.
+							</li>
+						</ul>
+					</section>
+
+        </section>
+
+        <section data-background="#f52424" data-background-transition="zoom">
+          <section>
+            <h3>ePages Now</h3>
+          </section>
+
+					<section>
+						<p>
+							<a href="https://epages.atlassian.net/browse/AD-6194" target="_blank">AD-6194</a>:
+							Enabled So Colissimo for ePages Now.
+						</p>
+						<div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanUnity.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
+					</section>
+
+          <section>
+						<h3>Mentions</h3>
+            <ul>
+              <li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-7032" target="_blank">AD-7032</a>:
+								checked the remaining payments in order to forsee potential blockers for the concept of payment groups.
+							</li>
+							<li class="fragment">
+								<a href="https://epages.atlassian.net/browse/UNITY-3086" target="_blank">UNITY-3086</a>:
+								adapted DistributorShopTypes.xml feature list of Unity Shop Types (<b>DE, FR, IT, ES, US, UK</b>) to activate all available thirdparty features.
+							</li>
+						</ul>
+          </section>
+        </section>
+
+        <section  data-background="#000000" data-background-transition="zoom">
+          <h3>FIN.</h3>
+        </section>
+
+			</div>
+		</div>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
