@@ -38,15 +38,17 @@ function renderTicketTypeDistribution(data) {
           {
               data: Object.values(data),
               backgroundColor: [
+                  "#63ba3c",
                   "#e5493a",
                   "#4bade8",
-                  "#63ba3c",
+                  "#32f0c5",
                   "#9da8b5"
               ],
               hoverBackgroundColor: [
+                  "#529f2f",
                   "#cb4336",
                   "#3d85b0",
-                  "#59a636",
+                  "#12e4b5",
                   "#939da8"
               ]
           }]

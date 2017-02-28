@@ -40,6 +40,8 @@
 	          <h2>Impediments</h2>
 	          <ul>
 	            <li>Vacations</li>
+							<li>PayPal PLUS fixes</li>
+							<li>Developer Onboarding</li>
 	          </ul>
 	        </section>
 
@@ -47,7 +49,10 @@
 	          <h2>Agenda</h2>
 	          <ul>
 							<li>Sprint Numbers</li>
+							<li>Research</li>
 							<li>PayPal Express</li>
+							<li>Infrastructure</li>
+							<li>Whats not Merged?</li>
 	          </ul>
 	        </section>
 
@@ -71,9 +76,9 @@
 						<canvas id="ticket-distribution" width="400" height="200"></canvas>
 						<script>
 							renderTicketDistribution({
-								"ePages Now": 3,
-								"ePages6": 2,
-								"Infrastructure": 1
+								"ePages Now":5,
+								"ePages6": 6,
+								"Infrastructure": 2
 							});
 						</script>
 					</section>
@@ -84,10 +89,11 @@
 						<canvas id="ticket-type-distribution" width="400" height="200"></canvas>
 						<script>
 							renderTicketTypeDistribution({
-								"bug": 3,
-								"task": 2,
-								"improvement": 1,
-								"research": 3
+								"story": 2,
+								"bug": 4,
+								"task": 3,
+								"improvement": 0,
+								"research": 2
 							});
 						</script>
 					</section>
@@ -107,85 +113,87 @@
 
         <section data-background="#72d6ff" data-background-transition="zoom">
           <section>
-            <h3>PayPal PLUS</h3>
+            <h3>Research</h3>
           </section>
 
           <section>
-            <p><a href="https://epages.atlassian.net/browse/AD-6782" target="_blank">AD-6308 PayPal PLUS</a>:
-							epages address fields <strong>Address (2nd line)</strong>, <strong>Address extention</strong> and <strong>Company</strong> are now transfered to PayPal.</p>
-            <div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanReview.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
+            <p><a href="https://epages.atlassian.net/browse/AD-7289" target="_blank">AD-7289 Paydirekt</a>:
+							Integration of Paydirekt via Payone</p>
+            <div class="demo-button"><a href="https://epages.atlassian.net/wiki/display/TOC/Paydirekt+using+Payone" target="_blank">Outcome</a></div>
           </section>
 
           <section>
             <h3>Mentions</h3>
             <ul>
               <li class="fragment">
-								<a href="https://epages.atlassian.net/browse/AD-6812" target="_blank">AD-6812 PayPal PLUS</a>:
-								when setup as <strong><i>order after payment</i></strong> it's no longer possible to block the checkout when canceling during the payment at paypal and then reattempt to checkout.
-							</li>
-							<li class="fragment">
-								<a href="https://epages.atlassian.net/browse/AD-6912" target="_blank">AD-6912 PayPal PLUS</a>:
-								refactored code for determining the target environment of the payment method.
+								<a href="https://epages.atlassian.net/browse/AD-7290" target="_blank">AD-7290 Postfinance</a>:
+								payment status wasn't set accordingly on goCommerce plattform - issue was incomplete setup.
 							</li>
 						</ul>
           </section>
         </section>
 
-				<section data-background="#fbbc05" data-background-transition="zoom">
+				<section data-background="#246df5" data-background-transition="zoom">
           <section>
-            <h3>Google Shopping</h3>
-          </section>
-
-					<section>
-						<p>
-							<a href="https://epages.atlassian.net/browse/AD-5499" target="_blank">AD-5499</a>:
-							provided option to choose how to export products with stocklevel 0.
-						</p>
-						<div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanReview.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
-					</section>
-
-        </section>
-
-				<section data-background="#34a853" data-background-transition="zoom">
-          <section>
-            <h3>Sage One</h3>
+            <h3>PayPal Express</h3>
           </section>
 
 					<section>
 						<h3>Mentions</h3>
-            <ul>
+						<ul>
               <li class="fragment">
-								<a href="https://epages.atlassian.net/browse/AD-6936" target="_blank">AD-6936</a>:
-								DELETE order call was missing a header-field specifing the integration version. It caused unnecessary error logs.
+								<a href="https://epages.atlassian.net/browse/AD-7119" target="_blank">AD-7119</a>:
+								PayPal was rejecting orders using specific currencies that don't allow decimals (like <b>japanese Yen</b>) when amounts where send including decimals.
 							</li>
 						</ul>
 					</section>
 
         </section>
 
-        <section data-background="#f52424" data-background-transition="zoom">
+				<section data-background="#b6b6b6" data-background-transition="zoom">
           <section>
-            <h3>ePages Now</h3>
+            <h3>Infrastructure</h3>
           </section>
 
 					<section>
-						<p>
-							<a href="https://epages.atlassian.net/browse/AD-6194" target="_blank">AD-6194</a>:
-							Enabled So Colissimo for ePages Now.
-						</p>
-						<div class="demo-button"><a href="https://teamocean-wording.epages.com/epages/OceanUnity.admin?ChangeAction=SaveLoginForm&Login=admin&Password=admin" target="_blank">Demo</a></div>
+						<h3>Mentions</h3>
+            <ul>
+              <li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-6936" target="_blank">AD-7243</a>:
+								Restricitred access rights of oceanhh-ci accounts to needed repositories.
+							</li>
+							<li class="fragment">
+								<a href="https://epages.atlassian.net/browse/ESF-1580" target="_blank">ESF-1580</a>:
+								Stabalize PayPal Express ESF tests.
+							</li>
+						</ul>
 					</section>
+
+        </section>
+
+        <section data-background="#f3a928" data-background-transition="zoom">
+          <section>
+            <h3>Not Merged</h3>
+          </section>
 
           <section>
 						<h3>Mentions</h3>
             <ul>
               <li class="fragment">
-								<a href="https://epages.atlassian.net/browse/AD-7032" target="_blank">AD-7032</a>:
-								checked the remaining payments in order to forsee potential blockers for the concept of payment groups.
+								<a href="https://epages.atlassian.net/browse/AD-7250" target="_blank">AD-7250 AvaTax</a>:
+								Enable the use of Avatax for all international addresses.
 							</li>
 							<li class="fragment">
-								<a href="https://epages.atlassian.net/browse/UNITY-3086" target="_blank">UNITY-3086</a>:
-								adapted DistributorShopTypes.xml feature list of Unity Shop Types (<b>DE, FR, IT, ES, US, UK</b>) to activate all available thirdparty features.
+								<a href="https://epages.atlassian.net/browse/AD-7136" target="_blank">AD-7136 Skrill</a>:
+								Update marketing text and enable additional payment methods (<b>DK Dankort, Postepay, Rapid Transfer, Nordea Solo, Alipay, Neteller</b>).
+							</li>
+							<li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-7137" target="_blank">AD-7137 Amazon Payments</a>:
+								Rebranding of Amazon Payments to <b>Amazon Pay</b> (MBO parts).
+							</li>
+							<li class="fragment">
+								<a href="https://epages.atlassian.net/browse/AD-6497" target="_blank">AD-6497 Universal Product Portals</a>:
+								Prepare Universal Product Portals to support ePages Now MBO.
 							</li>
 						</ul>
           </section>
